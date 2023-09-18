@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{% block title %} Welcome to FlaskBlog {% endblock %}</h1>
+    {% for result in results_merged %}
+    <a href="#">
+        <h2>{{ result['immobili'] }}</h2>
+    </a>
+    <span class="badge badge-primary">{{ result['prezzo'] }}</span>
+    <hr>
+{% endfor %}
+{% endblock %}
